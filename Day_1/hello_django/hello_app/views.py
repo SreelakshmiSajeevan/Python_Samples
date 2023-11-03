@@ -4,4 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def print_hello(request):
-    return HttpResponse("hello django")
+    sat_scores={
+        'name':'Mike',
+        'course' : 'Flutter',
+        'marks' : 45
+    }
+    return render(request, 'hello.html', sat_scores)
+    # return HttpResponse("<b>hello django</b>")
